@@ -78,7 +78,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-event-names/index.html">IEventNames</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-event-names/index.html">IEventNames</a></div><div class="brief "><p class="paragraph">Catalog of event-name constants passed as the <code class="lang-kotlin">name</code> argument to <a href="-ingo-analytics/track-event.html">IngoAnalytics.trackEvent</a>. Covers app and session lifecycle (Launch, ScreenDisplayed), API instrumentation, navigation, flow milestones, and MiSnap capture outcomes. Each constant's value equals its name.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ingo-analytics/index.html">IngoAnalytics</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ingo-analytics/index.html">IngoAnalytics</a></div><div class="brief "><p class="paragraph">Implement this interface and register it via the SDK builder's <code class="lang-kotlin">analytics(...)</code> option to observe user and application behavior inside the SDK UX. The SDK invokes <a href="-ingo-analytics/track-event.html">trackEvent</a> for each tracked event, using the constants in <a href="-i-event-names/index.html">IEventNames</a>, <a href="-i-screen-names/index.html">IScreenNames</a>, <a href="-i-property-names/index.html">IPropertyNames</a>, and <a href="-i-property-values/index.html">IPropertyValues</a> as the event vocabulary. Calls are synchronous and blocking, so keep the implementation non-blocking.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-ingo-default-analytics/index.html">IngoDefaultAnalytics</a> : <a href="-ingo-analytics/index.html">IngoAnalytics</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-ingo-default-analytics/index.html">IngoDefaultAnalytics</a> : <a href="-ingo-analytics/index.html">IngoAnalytics</a></div><div class="brief "><p class="paragraph">The no-op <a href="-ingo-analytics/index.html">IngoAnalytics</a> used when no implementation is provided to the SDK builder's <code class="lang-kotlin">analytics(...)</code> option. Every <a href="-ingo-default-analytics/track-event.html">trackEvent</a> call is ignored. Supply your own <a href="-ingo-analytics/index.html">IngoAnalytics</a> to receive telemetry.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-property-names/index.html">IPropertyNames</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-property-names/index.html">IPropertyNames</a></div><div class="brief "><p class="paragraph">Catalog of the keys used in the <a href="-ingo-analytics/track-event.html">IngoAnalytics.trackEvent</a> properties map. SessionId, CustomerId, and SystemTime (plus TransactionId when applicable) appear on every event; others such as ScreenName, DocumentType, HttpStatus, and PromoCode are added per event. Each constant's value equals its name.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-property-values/index.html">IPropertyValues</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-property-values/index.html">IPropertyValues</a></div><div class="brief "><p class="paragraph">Catalog of the constrained values that appear for specific properties in the <a href="-ingo-analytics/track-event.html">IngoAnalytics.trackEvent</a> properties map: DocumentType values (IdFront, IdBack, CheckFront, CheckBack) and FundsTiming values (FundsInMinutes, FundsInDays). Each constant's value equals its name.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-screen-names/index.html">IScreenNames</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ingocore:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-i-screen-names/index.html">IScreenNames</a></div><div class="brief "><p class="paragraph">Catalog of SDK screen identifiers. A screen's constant is reported under the <code class="lang-kotlin">ScreenName</code> key (see <a href="-i-property-names/index.html">IPropertyNames</a>) in <a href="-ingo-analytics/track-event.html">IngoAnalytics.trackEvent</a> — for example on the <code class="lang-kotlin">ScreenDisplayed</code> event (see <a href="-i-event-names/index.html">IEventNames</a>) — letting you attribute events to a specific screen. Each constant's value equals its name.</p></div></div></div>
                 </div>
               </div>
             </div>
