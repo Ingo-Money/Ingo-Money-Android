@@ -1,0 +1,152 @@
+name: Validate
+
+on:
+  workflow_dispatch:
+    inputs:
+      sdk_version:
+        description: "SDK version to validate (e.g. 7.2.5)"
+        required: true
+        type: string
+  release:
+    types: [published]
+  schedule:
+    - cron: "0 12 * * 1"   # weekly — catch registry/access/coordinate regressions between releases
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    name: Resolve com.ingo.sdk:androidsdk from GitHub Packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"      # AGP 8.10.1 requires JDK 17
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install compileSdk platform
+        run: sdkmanager "platforms;android-36" > /dev/null
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.13"  # compatible with AGP 8.10.1; keep in step with the SDK's AGP
+
+      - name: Resolve target version
+        id: v
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          case "${{ github.event_name }}" in
+            workflow_dispatch) v="${{ inputs.sdk_version }}" ;;
+            release)           v="${GITHUB_REF_NAME}" ;;
+            *)                 v="$(gh release view --json tagName -q '.tagName')" ;;  # schedule -> latest release
+          esac
+          v="${v#v}"; v="${v#android-release-}"   # tolerate v* / android-release-* tag conventions
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "Validating com.ingo.sdk:androidsdk:$v"
+
+      - name: Scaffold a throwaway consumer project
+        run: |
+          set -euo pipefail
+          mkdir -p consumer/src/main
+          printf '<manifest/>\n' > consumer/src/main/AndroidManifest.xml
+
+          cat > settings.gradle.kts <<'EOF'
+          pluginManagement {
+              repositories { google(); mavenCentral(); gradlePluginPortal() }
+              plugins { id("com.android.library") version "8.10.1" }
+          }
+          dependencyResolutionManagement {
+              repositories {
+                  google()
+                  mavenCentral()
+
+                  // Ingo Money first-party SDK (the thing under test)
+                  maven {
+                      name = "IngoGitHubPackages"
+                      url = uri("https://maven.pkg.github.com/Ingo-Money/Ingo-Money-Android")
+                      credentials {
+                          username = providers.gradleProperty("gpr.user").orNull ?: ""
+                          password = providers.gradleProperty("gpr.key").orNull ?: ""
+                      }
+                      content { includeGroup("com.ingo.sdk") }
+                  }
+
+                  // MiSnap (Mitek) — vendor-direct GitHub Packages (same PAT)
+                  maven {
+                      name = "MitekGitHubPackages"
+                      url = uri("https://maven.pkg.github.com/mitek-systems/misnap-android")
+                      credentials {
+                          username = providers.gradleProperty("gpr.user").orNull ?: ""
+                          password = providers.gradleProperty("gpr.key").orNull ?: ""
+                      }
+                      content { includeGroup("com.miteksystems.misnap") }
+                  }
+
+                  // FraudForce (TransUnion / iovation) — anonymous, vendor-direct raw AAR
+                  exclusiveContent {
+                      forRepository {
+                          ivy {
+                              name = "FraudForceGitHubRaw"
+                              url = uri("https://raw.githubusercontent.com/iovation/deviceprint-SDK-Android")
+                              patternLayout { artifact("v[revision]/[artifact]-[revision].[ext]") }
+                              metadataSources { artifact() }
+                          }
+                      }
+                      filter { includeModule("com.iovation.mobile.android", "fraudforce-lib-release") }
+                  }
+              }
+          }
+          rootProject.name = "ingo-sdk-validate"
+          include(":consumer")
+          EOF
+
+          cat > build.gradle.kts <<'EOF'
+          // Aggregating root — the consumer module carries the check.
+          EOF
+
+          cat > consumer/build.gradle.kts <<'EOF'
+          plugins { id("com.android.library") }
+
+          android {
+              namespace = "com.ingo.validate"
+              compileSdk = 36
+              defaultConfig { minSdk = 24 }
+          }
+
+          val sdkVersion: String = providers.gradleProperty("sdkVersion").get()
+          dependencies { implementation("com.ingo.sdk:androidsdk:$sdkVersion") }
+
+          // Force resolution of the full partner graph and fail hard on any unresolved artifact
+          // (the built-in `dependencies` report exits 0 even when nodes are FAILED).
+          tasks.register("validateResolution") {
+              val cp = configurations.named("releaseCompileClasspath")
+              doLast {
+                  val files = cp.get().resolve()
+                  println("Resolved ${files.size} artifacts from the partner repositories:")
+                  files.map { it.name }.sorted().forEach { println("  - $it") }
+                  require(files.any { it.name.startsWith("androidsdk-") }) {
+                      "FAILED: com.ingo.sdk:androidsdk was not present in the resolved graph"
+                  }
+              }
+          }
+          EOF
+
+      - name: Resolve the SDK dependency graph
+        env:
+          GPR_USER: ${{ secrets.GPR_USER }}
+          GPR_KEY: ${{ secrets.GPR_KEY }}
+        run: |
+          gradle :consumer:validateResolution \
+            -PsdkVersion="${{ steps.v.outputs.version }}" \
+            -Pgpr.user="$GPR_USER" -Pgpr.key="$GPR_KEY" \
+            --no-daemon --no-configuration-cache --stacktrace
