@@ -62,7 +62,7 @@ jobs:
           set -euo pipefail
           mkdir -p consumer/src/main
           printf '<manifest/>\n' > consumer/src/main/AndroidManifest.xml
-
+          printf 'android.useAndroidX=true\n' > gradle.properties
           cat > settings.gradle.kts <<'EOF'
           pluginManagement {
               repositories { google(); mavenCentral(); gradlePluginPortal() }
