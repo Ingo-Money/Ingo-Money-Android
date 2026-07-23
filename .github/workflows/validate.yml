@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       sdk_version:
-        description: "SDK version to validate (e.g. 7.2.5)"
-        required: true
+        description: "SDK version to validate (leave blank to use the latest published version)"
+        required: false
         type: string
   release:
     types: [published]
@@ -42,15 +42,18 @@ jobs:
       - name: Resolve target version
         id: v
         env:
-          GH_TOKEN: ${{ github.token }}
+          GPR_USER: ${{ secrets.GPR_USER }}
+          GPR_KEY: ${{ secrets.GPR_KEY }}
         run: |
           set -euo pipefail
-          case "${{ github.event_name }}" in
-            workflow_dispatch) v="${{ inputs.sdk_version }}" ;;
-            release)           v="${GITHUB_REF_NAME}" ;;
-            *)                 v="$(gh release view --json tagName -q '.tagName')" ;;  # schedule -> latest release
-          esac
-          v="${v#v}"; v="${v#android-release-}"   # tolerate v* / android-release-* tag conventions
+          v="${{ inputs.sdk_version }}"   # empty on schedule/release, or if left blank on a manual run
+          if [ -z "$v" ]; then
+            echo "No version supplied — resolving the latest published version from GitHub Packages…"
+            url="https://maven.pkg.github.com/Ingo-Money/Ingo-Money-Android/com/ingo/sdk/androidsdk/maven-metadata.xml"
+            meta="$(curl -sSfL -u "$GPR_USER:$GPR_KEY" "$url")"
+            v="$(printf '%s' "$meta" | python3 -c "import sys, re; d = sys.stdin.read(); m = re.search(r'<release>([^<]+)</release>', d) or re.search(r'<latest>([^<]+)</latest>', d); print(m.group(1) if m else '')")"
+          fi
+          [ -n "$v" ] || { echo "::error::could not determine a version to validate"; exit 1; }
           echo "version=$v" >> "$GITHUB_OUTPUT"
           echo "Validating com.ingo.sdk:androidsdk:$v"
 
