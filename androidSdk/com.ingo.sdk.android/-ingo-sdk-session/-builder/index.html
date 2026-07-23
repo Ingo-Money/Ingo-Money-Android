@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Builder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Ingo Money Android SDK
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":androidSdk:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="androidSdk::com.ingo.sdk.android/IngoSdkSession.Builder///PointingToDeclaration//-1627156504">
+  <div class="breadcrumbs"><a href="../../../index.html">androidSdk</a><span class="delimiter">/</span><a href="../../index.html">com.ingo.sdk.android</a><span class="delimiter">/</span><a href="../index.html">IngoSdkSession</a><span class="delimiter">/</span><span class="current">Builder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Builder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromContext<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">The Builder is initialized with the Context from which the Ingo SDK Activity is launched, typically the Application Context or the calling Activity.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>from</span><wbr><span><span>Context</span></span></u></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1517768916%2FConstructors%2F-1627156504" anchor-label="Builder" id="1517768916%2FConstructors%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-builder.html"><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1517768916%2FConstructors%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromContext<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1584000322%2FFunctions%2F-1627156504" anchor-label="accountIdToFund" id="-1584000322%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="account-id-to-fund.html"><span>account</span><wbr><span>Id</span><wbr><span>To</span><wbr><span><span>Fund</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1584000322%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="account-id-to-fund.html"><span class="token function">accountIdToFund</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accountIdToFund<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">If the customer has multiple accounts registered, the Ingo SDK's default behavior is to allow the user to select which they'd like to fund.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1246210195%2FFunctions%2F-1627156504" anchor-label="activityResultLauncher" id="-1246210195%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-result-launcher.html"><span>activity</span><wbr><span>Result</span><wbr><span><span>Launcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1246210195%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="activity-result-launcher.html"><span class="token function">activityResultLauncher</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activityResultLauncher<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/activity/result/ActivityResultLauncher.html">ActivityResultLauncher</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/android/content/Intent.html">Intent</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Required parameter to launch the SDK. This <a href="https://developer.android.com/reference/androidx/activity/result/ActivityResultLauncher">ActivityResultLauncher</a> is invoked when the Ingo Money Mobile SDK Activity finishes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1546832469%2FFunctions%2F-1627156504" anchor-label="analytics" id="1546832469%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="analytics.html"><span><span>analytics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1546832469%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="analytics.html"><span class="token function">analytics</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">analytics<span class="token operator">: </span><a href="../../../../ingocore/com.ingo.sdk.kotlin.common.analytics/-ingo-analytics/index.html">IngoAnalytics</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Provide an implementation of the IngoAnalytics interface in order to receive callbacks of user and application behavior in the Ingo SDK UX.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="564242420%2FFunctions%2F-1627156504" anchor-label="baseUrl" id="564242420%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="base-url.html"><span>base</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="564242420%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="base-url.html"><span class="token function">baseUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">The URL for the environment the Ingo Money Mobile SDK should connect to, to be provided by Ingo</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="771354560%2FFunctions%2F-1627156504" anchor-label="build" id="771354560%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="771354560%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">IngoSdkSession</a></div><div class="brief "><p class="paragraph">Constructs the <code>IngoSdkSession</code> with the configured parameters</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="420865969%2FFunctions%2F-1627156504" anchor-label="customerId" id="420865969%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="customer-id.html"><span>customer</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="420865969%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="customer-id.html"><span class="token function">customerId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">customerId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">The <code class="lang-kotlin">customerId</code> value returned from the server to server register customer API call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-517187295%2FFunctions%2F-1627156504" anchor-label="fraudforceDeviceBlackbox" id="-517187295%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fraudforce-device-blackbox.html"><span>fraudforce</span><wbr><span>Device</span><wbr><span><span>Blackbox</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-517187295%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="fraudforce-device-blackbox.html"><span class="token function">fraudforceDeviceBlackbox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">deviceBlackBox<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">The blackbox value generated by the Transunion Device Risk SDK <code class="lang-kotlin">getBlackbox()</code> function.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1028199790%2FFunctions%2F-1627156504" anchor-label="isDarkModeAllowed" id="1028199790%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-dark-mode-allowed.html"><span>is</span><wbr><span>Dark</span><wbr><span>Mode</span><wbr><span><span>Allowed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1028199790%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-dark-mode-allowed.html"><span class="token function">isDarkModeAllowed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isDarkModeAllowed<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">By default, the SDK allows dark mode if the user has it enabled. Set this to false to force the SDK to use the configured light theme.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1766803791%2FFunctions%2F-1627156504" anchor-label="isEdgeToEdgeEnabled" id="-1766803791%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-edge-to-edge-enabled.html"><span>is</span><wbr><span>Edge</span><wbr><span>To</span><wbr><span>Edge</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1766803791%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-edge-to-edge-enabled.html"><span class="token function">isEdgeToEdgeEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isEdgeToEdgeEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="547624600%2FFunctions%2F-1627156504" anchor-label="isFundingDestinationNameDisplayed" id="547624600%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-funding-destination-name-displayed.html"><span>is</span><wbr><span>Funding</span><wbr><span>Destination</span><wbr><span>Name</span><wbr><span><span>Displayed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="547624600%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-funding-destination-name-displayed.html"><span class="token function">isFundingDestinationNameDisplayed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isFundingDestinationNameDisplayed<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1557706928%2FFunctions%2F-1627156504" anchor-label="isIconTintEnabled" id="-1557706928%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-icon-tint-enabled.html"><span>is</span><wbr><span>Icon</span><wbr><span>Tint</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1557706928%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-icon-tint-enabled.html"><span class="token function">isIconTintEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">By default, the SDK tints icons with the IngoSdkColorTheme values programmatically. Set this to false in order to disable tinting if overriding default assets with icons that have specific or multiple colors</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-377042299%2FFunctions%2F-1627156504" anchor-label="isLoggingEnabled" id="-377042299%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-logging-enabled.html"><span>is</span><wbr><span>Logging</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-377042299%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-logging-enabled.html"><span class="token function">isLoggingEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">By default, logging is disabled in the Ingo Money Mobile SDK. To enable logging of all HTTP requests and responses as well as other debug and error information to the device log, add this method with a <code class="lang-kotlin">true</code> parameter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="997040834%2FFunctions%2F-1627156504" anchor-label="isPromoCodeEnabled" id="997040834%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-promo-code-enabled.html"><span>is</span><wbr><span>Promo</span><wbr><span>Code</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="997040834%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-promo-code-enabled.html"><span class="token function">isPromoCodeEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">By default, the SDK allows a user to input a promotion code. Set this to false in order to hide the promotion code button.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2139485342%2FFunctions%2F-1627156504" anchor-label="isScreenshotEnabled" id="-2139485342%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-screenshot-enabled.html"><span>is</span><wbr><span>Screenshot</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2139485342%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-screenshot-enabled.html"><span class="token function">isScreenshotEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isScreenshotEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">By default, screenshots are enabled. Setting this to false will <a href="https://developer.android.com/security/fraud-prevention/activities">apply FLAG_SECURE to the window</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-146223087%2FFunctions%2F-1627156504" anchor-label="misnapLicense" id="-146223087%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="misnap-license.html"><span>misnap</span><wbr><span><span>License</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-146223087%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="misnap-license.html"><span class="token function">misnapLicense</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">misnapLicense<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2132700848%2FFunctions%2F-1627156504" anchor-label="sdkAuthorizationToken" id="2132700848%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sdk-authorization-token.html"><span>sdk</span><wbr><span>Authorization</span><wbr><span><span>Token</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2132700848%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="sdk-authorization-token.html"><span class="token function">sdkAuthorizationToken</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sdkAuthorizationToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">The <code class="lang-kotlin">sessionToken</code> header value returned from the server to server register customer API call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1208136411%2FFunctions%2F-1627156504" anchor-label="theme" id="1208136411%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="theme.html"><span><span>theme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1208136411%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="theme.html"><span class="token function">theme</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">theme<span class="token operator">: </span><a href="../../../../ingocore/com.ingo.sdk.kotlin.ux/-ingo-sdk-theme/index.html">IngoSdkTheme</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Overrides the values in colors.xml at runtime.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1349085875%2FFunctions%2F-1627156504" anchor-label="typography" id="1349085875%2FFunctions%2F-1627156504" data-filterable-set=":androidSdk:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":androidSdk:dokkaHtmlPartial/release" data-filterable-set=":androidSdk:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="typography.html"><span><span>typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1349085875%2FFunctions%2F-1627156504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":androidSdk:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="typography.html"><span class="token function">typography</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typography<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/material3/Typography.html">Typography</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Override the default Typography value</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

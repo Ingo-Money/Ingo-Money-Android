@@ -1,0 +1,10 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:androidCoreUx
+com.ingo.sdk.android.core.ux.theme
+module:androidSdk
+com.ingo.sdk.android
+module:ingocore
+com.ingo.sdk.kotlin.common.analytics
+com.ingo.sdk.kotlin.ux
