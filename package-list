@@ -8,3 +8,6 @@ com.ingo.sdk.android
 module:ingocore
 com.ingo.sdk.kotlin.common.analytics
 com.ingo.sdk.kotlin.ux
+module:sharedsdk
+com.ingo.sdk.kotlin.common
+com.ingo.sdk.kotlin.common.model.result

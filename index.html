@@ -70,11 +70,82 @@
 <span class="top-right-position"><span class="copy-icon"></span>
           <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
         </span></div>
+      <h2 class="">Handling the result</h2>
+      <p class="paragraph">The SDK runs in its own activity and returns its outcome through the <code class="lang-kotlin">ActivityResultLauncher</code> you registered with <code class="lang-kotlin">IngoSdkSession.Builder.activityResultLauncher(...)</code>. When the flow finishes, your launcher's callback receives an <code class="lang-kotlin">ActivityResult</code>:</p>
+      <ul>
+        <li>
+          <p class="paragraph"><code class="lang-kotlin">resultCode</code> is <code class="lang-kotlin">Activity.RESULT_OK</code> for <strong>any normal exit</strong> — customer close <i>and</i> server   declines/errors alike. It is <strong>not</strong> how you tell outcomes apart.</p>
+        </li>
+        <li>
+          <p class="paragraph">The outcome is a JSON-encoded <code class="lang-kotlin">IngoSdkResult</code> on the result <code class="lang-kotlin">Intent</code>, under the extra key   <code class="lang-kotlin">&quot;ingo_sdk_result&quot;</code>. Decode it with <code class="lang-kotlin">IngoSdkResultDeserializer</code> and branch on <code class="lang-kotlin">IngoSdkResult.exitCode</code>.</p>
+        </li>
+      </ul>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result -&gt;<br>    val json = result.data?.getStringExtra(&quot;ingo_sdk_result&quot;) ?: return@registerForActivityResult<br>    val outcome: IngoSdkResult = IngoSdkResultDeserializer.deserialize(json)<br>    when (outcome.exitCode) {<br>        &quot;CUSTOMER_EXIT_SDK&quot;                       -&gt; { /* customer closed the SDK */ }<br>        &quot;TRANSACTION_CHECK_DECLINED&quot;             -&gt; { /* check declined */ }<br>        &quot;TRANSACTION_LOAD_FAILURE&quot;               -&gt; { /* funding failed */ }<br>        &quot;CUSTOMER_IDENTITY_VERIFICATION_FAILURE&quot; -&gt; { /* identity (KYC) failed */ }<br>        &quot;SESSION_TIMEOUT&quot;                        -&gt; { /* session timed out */ }<br>        else                                     -&gt; { /* handle other / future codes */ }<br>    }<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <p class="paragraph"><code class="lang-kotlin">IngoSdkResult</code> also carries <code class="lang-kotlin">customerIdentifier</code>, <code class="lang-kotlin">transactionReferenceNumber</code>, <code class="lang-kotlin">title</code>, <code class="lang-kotlin">detail</code>, and <code class="lang-kotlin">lastModule</code> for display and telemetry.</p>
+      <h3 class="">Exit codes</h3>
+      <p class="paragraph"><code class="lang-kotlin">exitCode</code> is a raw string that mirrors the server's outcome code, so <strong>handle unrecognized values gracefully</strong> — new codes can appear without an SDK update. The common terminal outcomes:</p>
+      <table>
+        <thead>
+          <tr>
+            <th><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">exitCode</code></th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">CUSTOMER_EXIT_SDK</code></td>
+            <td>The customer closed the SDK.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">CUSTOMER_EXIT_UNKNOWN_ERROR</code></td>
+            <td>An unexpected/unmapped error ended the session.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">CUSTOMER_IDENTITY_VERIFICATION_FAILURE</code></td>
+            <td>Identity verification (KYC) failed.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">TRANSACTION_CHECK_DECLINED</code></td>
+            <td>The check transaction was declined.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">TRANSACTION_LOAD_FAILURE</code></td>
+            <td>The transaction failed to load funds.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">TRANSACTION_VOIDED_CHECK_SOFT_DECLINED</code></td>
+            <td>A voided-check requirement was soft-declined.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">DEVICE_VERIFICATION_FAILURE</code></td>
+            <td>Device verification failed.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">SESSION_TIMEOUT</code></td>
+            <td>The session timed out.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">UNAUTHORIZED</code></td>
+            <td>The request was unauthorized.</td>
+          </tr>
+          <tr>
+            <td><code class="org.jetbrains.dokka.pages.commenttable@68b549a5 lang-kotlin">INTERNAL_SERVER_ERROR</code></td>
+            <td>A server-side error occurred.</td>
+          </tr>
+        </tbody>
+      </table>
       <h2 class="">What's documented here</h2>
       <p class="paragraph">This reference covers the <strong>partner-facing</strong> API only:</p>
       <ul>
         <li>
           <p class="paragraph"><code class="strong lang-kotlin"><strong>IngoSdkSession</strong></code> and its <code class="lang-kotlin">Builder</code> — the entry point.</p>
+        </li>
+        <li>
+          <p class="paragraph"><strong>Results</strong> — <code class="lang-kotlin">IngoSdkResult</code> (the session outcome) and <code class="lang-kotlin">IngoSdkResultDeserializer</code> (decode it from the launcher result).</p>
         </li>
         <li>
           <p class="paragraph"><strong>Theming</strong> — <code class="lang-kotlin">IngoSdkTheme</code>, <code class="lang-kotlin">IngoSdkColorTheme</code>, and <code class="lang-kotlin">IngoTypography</code>.</p>
@@ -114,6 +185,17 @@
           <div class="w-100"><span class="inline-flex">
               <div><a href="ingocore/index.html">ingocore</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1019517417%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1201611144%2FMain%2F0" anchor-label="sharedsdk" id="-1201611144%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="sharedsdk/index.html">sharedsdk</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1201611144%2FMain%2F0"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment"></span></div>
