@@ -1,6 +1,5 @@
 # Ingo Money Android SDK
 
-[![Release](https://img.shields.io/github/v/release/Ingo-Money/Ingo-Money-Android?sort=semver&label=release&color=2ea043)](https://github.com/Ingo-Money/Ingo-Money-Android/releases/latest)
 [![Platform](https://img.shields.io/badge/Android-24%2B-3DDC84?logo=android&logoColor=white)](https://developer.android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.1.21-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Packages](https://img.shields.io/badge/GitHub_Packages-Maven-2ea043?logo=github&logoColor=white)](https://github.com/Ingo-Money/Ingo-Money-Android/packages)
