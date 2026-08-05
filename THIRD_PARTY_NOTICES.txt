@@ -9,9 +9,11 @@ under the license indicated; the full text of every license used appears at the 
 All open-source components are under permissive licenses (Apache-2.0, MIT, BSD, ISC) — there is
 no copyleft.
 
-The SDK also integrates the following commercially-licensed vendor SDKs. These are governed by
-their own agreements (not the open-source licenses below) and are obtained per the Ingo
-integration guide from the vendors' own repositories, not redistributed here:
+The SDK also integrates the following commercially-licensed vendor SDKs. These are not open source
+and are governed by their own vendor agreements, not the licenses below. They are licensed to you
+directly by the vendor per the Ingo integration guide; where an Ingo distribution package includes
+their binaries (e.g. the offline package), those binaries remain subject to the applicable vendor
+agreement:
 
   * Mitek MiSnap  — Mitek Systems, Inc.        (document / check capture)
   * FraudForce    — TransUnion / iovation      (device fraud signal)
@@ -228,8 +230,8 @@ OPEN-SOURCE COMPONENTS
   * org.jspecify:jspecify:1.0.0
 
 ---- BSD 3-Clause License  (2 component(s)) ----
-  * com.google.protobuf:protobuf-javalite:3.25.5
-  * com.google.protobuf:protobuf-kotlin-lite:3.25.5
+  * com.google.protobuf:protobuf-javalite:3.25.5  —  Copyright 2008 Google Inc. All rights reserved.
+  * com.google.protobuf:protobuf-kotlin-lite:3.25.5  —  Copyright 2008 Google Inc. All rights reserved.
 
 ---- MIT License  (1 component(s)) ----
   * org.slf4j:slf4j-api:2.0.16  —  Copyright (c) 2004-2022 QOS.ch Sarl (Switzerland)
