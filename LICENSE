@@ -1,39 +1,11 @@
-Ingo Money Android SDK — Commercial License
+INGO MONEY SDK — PROPRIETARY LICENSE
 
 Copyright (c) 2026 Ingo Money, Inc. All rights reserved.
 
-1. Ownership. The Ingo Money Android SDK, including all libraries (AARs), binaries, documentation, and
-   related materials distributed via this package (the "SDK"), is the proprietary and confidential property
-   of Ingo Money, Inc. ("Ingo") and is protected by copyright and other intellectual‑property laws. No title
-   or ownership is transferred.
-
-2. License grant. Subject to a valid written agreement between you and Ingo and to these terms, Ingo grants
-   you a limited, non‑exclusive, non‑transferable, revocable license to incorporate the SDK, in unmodified
-   binary form, into your own application(s) solely to integrate Ingo Money services. All rights not
-   expressly granted are reserved by Ingo.
-
-3. Restrictions. You may not, except as expressly permitted by your agreement with Ingo or by applicable law:
-   (a) reverse engineer, decompile, or disassemble the SDK; (b) redistribute, sublicense, sell, lease, or
-   otherwise make the SDK available to any third party except as embedded within your application;
-   (c) modify or create derivative works of the binary libraries; or (d) remove or alter any proprietary or
-   attribution notices in the SDK.
-
-4. Third‑party components. The SDK integrates with third‑party software, including the TransUnion FraudForce
-   device‑risk SDK and Mitek MiSnap, each obtained directly from its vendor and governed by its own license
-   terms. Your use of those components is subject to those terms, which control in the event of any conflict
-   as to those components.
-
-5. No warranty. THE SDK IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-   NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT.
-
-6. Limitation of liability. TO THE MAXIMUM EXTENT PERMITTED BY LAW, INGO SHALL NOT BE LIABLE FOR ANY
-   INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR DATA, ARISING
-   OUT OF OR RELATED TO THE SDK.
-
-7. Termination. This license terminates automatically upon breach or upon termination of your agreement with
-   Ingo. On termination you must cease use of and remove the SDK from your applications and systems.
-
-8. Governing law. This license is governed by the law that governs your commercial agreement with Ingo
-   Money, Inc.
-
-Commercial and integration inquiries: contact your Ingo Money representative.
+The software and files in this repository (the "SDK") are the proprietary
+property of Ingo Money, Inc. ("Ingo"). Use of the SDK is governed exclusively
+by a separate written agreement between Ingo and the entity using it; if you
+have such an agreement, its terms control. If you do not, no rights in the SDK
+are granted to you, and you may not use, copy, modify, distribute, or reverse
+engineer the SDK. This license terminates automatically upon termination of
+the applicable agreement with Ingo.

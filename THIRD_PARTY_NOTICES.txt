@@ -1,7 +1,3 @@
-[ DRAFT — the wording of this preamble is pending Legal review (story #91911, task #91925).
-  Only this note is under review: the component inventory below is tool-generated, and the license
-  texts appended at the end are the canonical SPDX texts. Remove this marker once GC signs off. ]
-
 INGO MONEY SDK — THIRD-PARTY SOFTWARE NOTICES
 
 This software includes the third-party open-source components listed below. Each is provided
@@ -10,13 +6,20 @@ All open-source components are under permissive licenses (Apache-2.0, MIT, BSD, 
 no copyleft.
 
 The SDK also integrates the following commercially-licensed vendor SDKs. These are not open source
-and are governed by their own vendor agreements, not the licenses below. They are licensed to you
-directly by the vendor per the Ingo integration guide; where an Ingo distribution package includes
-their binaries (e.g. the offline package), those binaries remain subject to the applicable vendor
-agreement:
+and are governed by their own vendor agreements, not the licenses below:
 
   * Mitek MiSnap  — Mitek Systems, Inc.        (document / check capture)
+      Not redistributed through Ingo's package channels. Partners resolve MiSnap directly from
+      Mitek's own repositories under their own agreement with Mitek. Where an offline distribution
+      package supplied to a partner under an existing agreement contains Mitek binaries, those
+      binaries remain subject to that partner's agreement with Mitek.
+
   * FraudForce    — TransUnion / iovation      (device fraud signal)
+      On Android, partners resolve FraudForce directly from iovation's repository. The Ingo iOS
+      Swift Package includes the unmodified FraudForce xcframework, because TransUnion does not
+      publish an SPM-compatible package for partners' builds to resolve against; iovation
+      consented to this approach, and only current, unmodified versions are shipped. Use of
+      FraudForce remains subject to the applicable TransUnion / iovation agreement.
 
 Google Play Services (Google LLC), used on Android under the Android Software Development Kit
 License, resolves from Google's own repositories.
@@ -41,13 +44,13 @@ OPEN-SOURCE COMPONENTS
   * androidx.arch.core:core-common:2.2.0
   * androidx.arch.core:core-runtime:2.2.0
   * androidx.autofill:autofill:1.0.0
-  * androidx.camera.featurecombinationquery:featurecombinationquery:1.5.1
-  * androidx.camera:camera-camera2:1.5.1
-  * androidx.camera:camera-core:1.5.1
-  * androidx.camera:camera-extensions:1.5.1
-  * androidx.camera:camera-lifecycle:1.5.1
-  * androidx.camera:camera-video:1.5.1
-  * androidx.camera:camera-view:1.5.1
+  * androidx.camera.featurecombinationquery:featurecombinationquery:1.5.3
+  * androidx.camera:camera-camera2:1.5.3
+  * androidx.camera:camera-core:1.5.3
+  * androidx.camera:camera-extensions:1.5.3
+  * androidx.camera:camera-lifecycle:1.5.3
+  * androidx.camera:camera-video:1.5.3
+  * androidx.camera:camera-view:1.5.3
   * androidx.cardview:cardview:1.0.0
   * androidx.collection:collection-jvm:1.5.0
   * androidx.collection:collection-ktx:1.5.0
@@ -105,12 +108,12 @@ OPEN-SOURCE COMPONENTS
   * androidx.cursoradapter:cursoradapter:1.0.0
   * androidx.customview:customview-poolingcontainer:1.0.0
   * androidx.customview:customview:1.1.0
-  * androidx.databinding:viewbinding:8.1.0
+  * androidx.databinding:viewbinding:8.6.0
   * androidx.drawerlayout:drawerlayout:1.1.1
   * androidx.dynamicanimation:dynamicanimation:1.1.0
   * androidx.emoji2:emoji2-views-helper:1.4.0
   * androidx.emoji2:emoji2:1.4.0
-  * androidx.exifinterface:exifinterface:1.4.1
+  * androidx.exifinterface:exifinterface:1.4.2
   * androidx.fragment:fragment-ktx:1.8.9
   * androidx.fragment:fragment:1.8.9
   * androidx.graphics:graphics-path:1.0.1
@@ -207,8 +210,8 @@ OPEN-SOURCE COMPONENTS
   * org.jetbrains.kotlin:kotlin-parcelize-runtime:2.1.21
   * org.jetbrains.kotlin:kotlin-reflect:2.1.21
   * org.jetbrains.kotlin:kotlin-stdlib-common:2.1.21
-  * org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22
-  * org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22
+  * org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.21
+  * org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21
   * org.jetbrains.kotlin:kotlin-stdlib:2.1.21
   * org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2
   * org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.10.2

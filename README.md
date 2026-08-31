@@ -5,7 +5,7 @@
 [![Packages](https://img.shields.io/badge/GitHub_Packages-Maven-2ea043?logo=github&logoColor=white)](https://github.com/Ingo-Money/Ingo-Money-Android/packages)
 [![Documentation](https://img.shields.io/badge/docs-Dokka-8A2BE2?logo=readthedocs&logoColor=white)](https://ingo-money.github.io/Ingo-Money-Android/)
 [![Validate](https://github.com/Ingo-Money/Ingo-Money-Android/actions/workflows/validate.yml/badge.svg)](https://github.com/Ingo-Money/Ingo-Money-Android/actions/workflows/validate.yml)
-[![License](https://img.shields.io/badge/license-Commercial-lightgrey)](LICENSE)
+[![License](https://img.shields.io/badge/license-Proprietary-lightgrey)](LICENSE)
 
 The official Android package for the Ingo Money SDK — Ingo's mobile check-capture and funding experience.
 
@@ -120,4 +120,4 @@ For integration support, contact your Ingo Money representative. Security report
 
 ## License
 
-Commercial — see [LICENSE](LICENSE).
+Proprietary — see [LICENSE](LICENSE).
