@@ -31,6 +31,8 @@ jobs:
           java-version: "17"      # AGP 8.10.1 requires JDK 17
 
       - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
 
       - name: Install compileSdk platform
         run: sdkmanager "platforms;android-36" > /dev/null
