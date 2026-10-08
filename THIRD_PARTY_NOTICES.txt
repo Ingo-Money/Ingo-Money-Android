@@ -32,7 +32,7 @@ from the build and is not hand-edited.
 OPEN-SOURCE COMPONENTS
 ----------------------
 
----- Apache License, Version 2.0  (198 component(s)) ----
+---- Apache License, Version 2.0  (192 component(s)) ----
   * androidx.activity:activity-compose:1.11.0
   * androidx.activity:activity-ktx:1.11.0
   * androidx.activity:activity:1.11.0
@@ -55,14 +55,14 @@ OPEN-SOURCE COMPONENTS
   * androidx.collection:collection-jvm:1.5.0
   * androidx.collection:collection-ktx:1.5.0
   * androidx.collection:collection:1.5.0
-  * androidx.compose.animation:animation-android:1.9.4
-  * androidx.compose.animation:animation-core-android:1.9.4
-  * androidx.compose.animation:animation-core:1.9.4
-  * androidx.compose.animation:animation:1.9.4
-  * androidx.compose.foundation:foundation-android:1.9.4
-  * androidx.compose.foundation:foundation-layout-android:1.9.4
-  * androidx.compose.foundation:foundation-layout:1.9.4
-  * androidx.compose.foundation:foundation:1.9.4
+  * androidx.compose.animation:animation-android:1.8.2
+  * androidx.compose.animation:animation-core-android:1.8.2
+  * androidx.compose.animation:animation-core:1.8.2
+  * androidx.compose.animation:animation:1.8.2
+  * androidx.compose.foundation:foundation-android:1.8.2
+  * androidx.compose.foundation:foundation-layout-android:1.8.2
+  * androidx.compose.foundation:foundation-layout:1.8.2
+  * androidx.compose.foundation:foundation:1.8.2
   * androidx.compose.material3:material3-android:1.4.0
   * androidx.compose.material3:material3:1.4.0
   * androidx.compose.material:material-android:1.9.4
@@ -86,12 +86,6 @@ OPEN-SOURCE COMPONENTS
   * androidx.compose.ui:ui-graphics:1.9.4
   * androidx.compose.ui:ui-text-android:1.9.4
   * androidx.compose.ui:ui-text:1.9.4
-  * androidx.compose.ui:ui-tooling-android:1.9.4
-  * androidx.compose.ui:ui-tooling-data-android:1.9.4
-  * androidx.compose.ui:ui-tooling-data:1.9.4
-  * androidx.compose.ui:ui-tooling-preview-android:1.9.4
-  * androidx.compose.ui:ui-tooling-preview:1.9.4
-  * androidx.compose.ui:ui-tooling:1.9.4
   * androidx.compose.ui:ui-unit-android:1.9.4
   * androidx.compose.ui:ui-unit:1.9.4
   * androidx.compose.ui:ui-util-android:1.9.4

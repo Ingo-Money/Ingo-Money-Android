@@ -82,12 +82,12 @@ Then add the SDK to your app module (`build.gradle.kts`). MiSnap and FraudForce 
 
 ```kotlin
 dependencies {
-    implementation("com.ingo.sdk:androidsdk:7.2.5")
+    implementation("com.ingo.sdk:androidsdk:7.3.0")
 }
 ```
 
 > Coordinates are **lowercase** (`androidsdk`, `androidsdkux`, `androidcoreux`, `ingocore`, `sharedsdk`).
-> Use the latest version — see the Release badge above.
+> Use the latest version listed under [Packages](https://github.com/Ingo-Money/Ingo-Money-Android/packages).
 
 ## Usage
 
