@@ -5,16 +5,15 @@
 If you believe you have found a security vulnerability in the Ingo Money Android SDK, please report it
 privately — **do not open a public issue.**
 
-- Use GitHub's private vulnerability reporting on this repository: open the **Security** tab and select
-  **"Report a vulnerability"** to submit a description, affected version, and reproduction steps privately.
-- Or reach out to your Ingo Money representative and ask to be connected with the mobile security team.
+- Contact your Ingo Money representative and ask to be connected with the mobile security team. Include a
+  description, the affected version, and reproduction steps.
 - We aim to acknowledge reports within a reasonable timeframe and will coordinate a fix and disclosure.
 
 Please do not include real credentials, customer data, tokens, or license keys in a report.
 
 ## Supported versions
 
-Security fixes are provided for the current supported line only. `7.2.x` is the supported line; versions
+Security fixes are provided for the current supported line only. `7.3.x` is the supported line; versions
 before it are no longer supported. Upgrade to the latest release to receive fixes.
 
 ## Verifying what you resolved
